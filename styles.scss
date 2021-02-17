@@ -21,3 +21,14 @@ $font-size: 12px;
 $fony-family: "Kumbh Sans", sans-serif;
 $font-weight-light: 400;
 $font-weight-heavy: 700;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
