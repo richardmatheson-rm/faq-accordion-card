@@ -35,17 +35,33 @@ body .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 930px;
   height: 515px;
   background-color: white;
   border-radius: 20px;
-  background-image: url(/images/bg-pattern-desktop.svg);
+  background-image: url(/images/bg-pattern-desktop.svg), url(/images/illustration-woman-online-desktop.svg);
   background-repeat: no-repeat;
-  background-position-x: -550px;
-  background-position-y: -300px;
+  background-position-x: -550px, -60px;
+  background-position-y: -300px, 63px;
+}
+
+body .container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .image-container img {
+  position: relative;
+  right: 75px;
+  top: 30px;
+  height: 150px;
 }
 
 body .container .container-content {

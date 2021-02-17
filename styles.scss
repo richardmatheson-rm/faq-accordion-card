@@ -42,19 +42,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   background-image: url(/images/illustration-woman-online-desktop.svg);
 
   .container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 930px;
     height: 515px;
     background-color: white;
     border-radius: 20px;
-    background-image: url(/images/bg-pattern-desktop.svg);
+    background-image: url(/images/bg-pattern-desktop.svg),
+      url(/images/illustration-woman-online-desktop.svg);
     background-repeat: no-repeat;
-    background-position-x: -550px;
-    background-position-y: -300px;
+    background-position-x: -550px, -60px;
+    background-position-y: -300px, 63px;
+
+    .image-container {
+      display: flex;
+      align-items: center;
+
+      img {
+        position: relative;
+        right: 75px;
+        top: 30px;
+        height: 150px;
+      }
+    }
 
     .container-content {
       display: flex;
