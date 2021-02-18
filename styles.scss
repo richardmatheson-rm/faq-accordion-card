@@ -36,6 +36,7 @@ body {
 
 body {
   background-image: linear-gradient($soft-violet, $soft-blue);
+  background-repeat: no-repeat;
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight-light;
@@ -44,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   letter-spacing: 0.03em;
+  overflow: hidden;
 
   .container {
     display: flex;
@@ -58,15 +60,41 @@ body {
     background-position-x: -550px, -60px;
     background-position-y: -300px, 63px;
 
+    @media screen and (max-width: $mobile-width) {
+      width: 327px;
+      height: 566px;
+      background-image: url(/images/bg-pattern-mobile.svg);
+      background-position-x: 45px;
+      background-position-y: -8px;
+      flex-direction: column;
+    }
+
     .image-container {
       display: flex;
       align-items: center;
 
-      img {
+      #box-illustration {
         position: relative;
         right: 75px;
         top: 30px;
         height: 150px;
+      }
+
+      #woman-illustration {
+        display: none;
+      }
+
+      @media screen and (max-width: $mobile-width) {
+        #woman-illustration {
+          display: initial;
+          position: relative;
+          left: 20px;
+          bottom: 85px;
+        }
+
+        #box-illustration {
+          display: none;
+        }
       }
     }
 
@@ -138,5 +166,3 @@ body {
   overflow: hidden;
   color: $dark-grayish-blue;
 }
-
-// Need to do text colour classes

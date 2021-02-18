@@ -13,6 +13,7 @@ body {
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -30,6 +31,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.03em;
+  overflow: hidden;
 }
 
 body .container {
@@ -49,6 +51,20 @@ body .container {
   background-position-y: -300px, 63px;
 }
 
+@media screen and (max-width: 375px) {
+  body .container {
+    width: 327px;
+    height: 566px;
+    background-image: url(/images/bg-pattern-mobile.svg);
+    background-position-x: 45px;
+    background-position-y: -8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 body .container .image-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,11 +74,27 @@ body .container .image-container {
           align-items: center;
 }
 
-body .container .image-container img {
+body .container .image-container #box-illustration {
   position: relative;
   right: 75px;
   top: 30px;
   height: 150px;
+}
+
+body .container .image-container #woman-illustration {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  body .container .image-container #woman-illustration {
+    display: initial;
+    position: relative;
+    left: 20px;
+    bottom: 85px;
+  }
+  body .container .image-container #box-illustration {
+    display: none;
+  }
 }
 
 body .container .container-content {
