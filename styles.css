@@ -94,4 +94,39 @@ body .container .container-content .flexbox-item {
           justify-content: center;
   border-bottom: 1px solid #e7e7e9;
 }
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  font-size: 13px;
+}
+
+.collapsible img {
+  float: right;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active {
+  color: #1d1e35;
+  font-weight: 700;
+}
+
+.active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.collapsible:hover {
+  color: #f47c57;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding-top: 10px;
+  display: none;
+  overflow: hidden;
+}
 /*# sourceMappingURL=styles.css.map */
