@@ -47,6 +47,10 @@ body {
   letter-spacing: 0.03em;
   overflow: hidden;
 
+  @media screen and (max-width: $mobile-width) {
+    line-height: 150%;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -85,11 +89,13 @@ body {
       }
 
       @media screen and (max-width: $mobile-width) {
+        height: 100px;
+
         #woman-illustration {
           display: initial;
           position: relative;
           left: 20px;
-          bottom: 85px;
+          bottom: 55px;
         }
 
         #box-illustration {
@@ -101,10 +107,20 @@ body {
     .container-content {
       display: flex;
       flex-direction: column;
-      //   width: 354px;
       width: 425px;
       height: 100%;
       justify-content: center;
+
+      @media screen and (max-width: $mobile-width) {
+        width: 100%;
+        align-items: center;
+
+        .main-heading {
+          text-align: center;
+          font-size: 30px;
+          padding-bottom: 25px;
+        }
+      }
 
       .flexbox-item {
         width: 354px;
@@ -113,6 +129,10 @@ body {
         flex-direction: column;
         justify-content: center;
         border-bottom: 1px solid $light-grayish-blue;
+
+        @media screen and (max-width: $mobile-width) {
+          width: 280px;
+        }
       }
 
       .flexbox-item:nth-child(1) {

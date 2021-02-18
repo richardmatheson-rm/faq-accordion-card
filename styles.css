@@ -34,6 +34,12 @@ body {
   overflow: hidden;
 }
 
+@media screen and (max-width: 375px) {
+  body {
+    line-height: 150%;
+  }
+}
+
 body .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,11 +92,14 @@ body .container .image-container #woman-illustration {
 }
 
 @media screen and (max-width: 375px) {
+  body .container .image-container {
+    height: 100px;
+  }
   body .container .image-container #woman-illustration {
     display: initial;
     position: relative;
     left: 20px;
-    bottom: 85px;
+    bottom: 55px;
   }
   body .container .image-container #box-illustration {
     display: none;
@@ -112,6 +121,20 @@ body .container .container-content {
           justify-content: center;
 }
 
+@media screen and (max-width: 375px) {
+  body .container .container-content {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .container .container-content .main-heading {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 25px;
+  }
+}
+
 body .container .container-content .flexbox-item {
   width: 354px;
   height: 50px;
@@ -126,6 +149,12 @@ body .container .container-content .flexbox-item {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px solid #e7e7e9;
+}
+
+@media screen and (max-width: 375px) {
+  body .container .container-content .flexbox-item {
+    width: 280px;
+  }
 }
 
 body .container .container-content .flexbox-item:nth-child(1) {
