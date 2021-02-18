@@ -8,8 +8,10 @@ for (i = 0; i < coll.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
+      content.parentElement.style.height = "50px"; // Revert flexbox item container height to 50px
     } else {
       content.style.display = "block";
+      content.parentElement.style.height = "100px"; // Convert flexbox item container height to 100px (collapsible expansion)
     }
   });
 }
